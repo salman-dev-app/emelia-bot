@@ -1,0 +1,304 @@
+<!-- web/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Emelia Bot Dashboard{% endblock %}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { 
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 { color: #667eea; font-size: 28px; }
+        .nav { display: flex; gap: 20px; }
+        .nav a { 
+            color: #555;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .nav a:hover { background: #667eea; color: white; }
+        .nav a.active { background: #667eea; color: white; }
+        .content { 
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .stats-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .stat-card h3 { font-size: 16px; opacity: 0.9; margin-bottom: 10px; }
+        .stat-card .value { font-size: 36px; font-weight: bold; }
+        .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .table th, .table td { 
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .table th { background: #f8f9fa; font-weight: 600; color: #555; }
+        .table tr:hover { background: #f8f9fa; }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-primary:hover { background: #5568d3; }
+        .btn-danger { background: #e74c3c; color: white; }
+        .btn-danger:hover { background: #c0392b; }
+        .logout { 
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .logout:hover { background: #c0392b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if session.logged_in %}
+        <div class="header">
+            <h1>🤖 Emelia Bot</h1>
+            <div class="nav">
+                <a href="/dashboard" {% if request.path == '/dashboard' %}class="active"{% endif %}>Dashboard</a>
+                <a href="/channels" {% if request.path == '/channels' %}class="active"{% endif %}>Channels</a>
+                <a href="/scheduled" {% if request.path == '/scheduled' %}class="active"{% endif %}>Scheduled</a>
+                <a href="/analytics" {% if request.path == '/analytics' %}class="active"{% endif %}>Analytics</a>
+                <a href="/settings" {% if request.path == '/settings' %}class="active"{% endif %}>Settings</a>
+                <a href="/logout" class="logout">Logout</a>
+            </div>
+        </div>
+        {% endif %}
+        
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- web/templates/login.html -->
+{% extends "base.html" %}
+{% block content %}
+<div style="max-width: 400px; margin: 100px auto; text-align: center;">
+    <h2 style="color: #667eea; margin-bottom: 30px;">🤖 Emelia Bot Login</h2>
+    
+    {% if error %}
+    <div style="background: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    <form method="POST" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <input type="text" name="username" placeholder="Username" required 
+               style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+        
+        <input type="password" name="password" placeholder="Password" required 
+               style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 16px;">
+            Login
+        </button>
+    </form>
+</div>
+{% endblock %}
+
+<!-- web/templates/dashboard.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin-bottom: 30px; color: #333;">📊 Dashboard Overview</h2>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>Connected Channels</h3>
+        <div class="value">{{ stats.total_channels }}</div>
+    </div>
+    
+    <div class="stat-card">
+        <h3>Scheduled Posts</h3>
+        <div class="value">{{ stats.scheduled_posts }}</div>
+    </div>
+    
+    <div class="stat-card">
+        <h3>Active Admins</h3>
+        <div class="value">{{ stats.active_admins }}</div>
+    </div>
+</div>
+
+<h3 style="margin-bottom: 15px; color: #555;">Recent Channels</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Channel Name</th>
+            <th>Username</th>
+            <th>ID</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for channel in channels %}
+        <tr>
+            <td>{{ channel.channel_name }}</td>
+            <td>@{{ channel.channel_username or 'N/A' }}</td>
+            <td>{{ channel.channel_id }}</td>
+            <td><span style="color: green;">●</span> Active</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+<!-- web/templates/channels.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin-bottom: 30px; color: #333;">📢 Connected Channels</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Channel Name</th>
+            <th>Username</th>
+            <th>Channel ID</th>
+            <th>Added Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for channel in channels %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ channel.channel_name }}</td>
+            <td>@{{ channel.channel_username or 'N/A' }}</td>
+            <td><code>{{ channel.channel_id }}</code></td>
+            <td>{{ channel.added_at }}</td>
+            <td><span style="color: green;">●</span> Active</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+<!-- web/templates/scheduled.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin-bottom: 30px; color: #333;">📅 Scheduled Posts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Channel</th>
+            <th>Message</th>
+            <th>Scheduled Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post.id }}</td>
+            <td>{{ post.channel_id }}</td>
+            <td>{{ post.message_text[:50] }}...</td>
+            <td>{{ post.scheduled_time }}</td>
+            <td><span style="color: orange;">⏳</span> {{ post.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+<!-- web/templates/analytics.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin-bottom: 30px; color: #333;">📈 Analytics & Reports</h2>
+
+{% for item in data %}
+<div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+    <h3 style="color: #667eea; margin-bottom: 15px;">{{ item.channel.channel_name }}</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+        <div>
+            <div style="color: #888; font-size: 14px;">Total Members</div>
+            <div style="font-size: 24px; font-weight: bold; color: #333;">
+                {% set total = item.stats|map(attribute='new_members')|sum - item.stats|map(attribute='left_members')|sum %}
+                {{ total }}
+            </div>
+        </div>
+        
+        <div>
+            <div style="color: #888; font-size: 14px;">Messages</div>
+            <div style="font-size: 24px; font-weight: bold; color: #333;">
+                {{ item.stats|map(attribute='messages_count')|sum }}
+            </div>
+        </div>
+        
+        <div>
+            <div style="color: #888; font-size: 14px;">Active Users</div>
+            <div style="font-size: 24px; font-weight: bold; color: #333;">
+                {{ item.stats|map(attribute='active_users')|sum }}
+            </div>
+        </div>
+        
+        <div>
+            <div style="color: #888; font-size: 14px;">Period</div>
+            <div style="font-size: 24px; font-weight: bold; color: #333;">7 days</div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+<!-- web/templates/settings.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 style="margin-bottom: 30px; color: #333;">⚙️ Bot Settings</h2>
+
+<div style="max-width: 600px;">
+    <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+        <strong>Bot Status:</strong> <span style="color: green;">● Running</span>
+    </div>
+    
+    <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+        <strong>Dashboard Username:</strong> admin
+    </div>
+    
+    <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+        <strong>Timezone:</strong> UTC
+    </div>
+    
+    <button class="btn btn-primary">Save Changes</button>
+    <button class="btn btn-danger" style="margin-left: 10px;">Restart Bot</button>
+</div>
+{% endblock %}
