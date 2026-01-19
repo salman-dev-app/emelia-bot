@@ -5,13 +5,13 @@ from telegram.ext import (
     filters, ContextTypes, CallbackQueryHandler
 )
 import asyncio
-from config import Config
-from database import Database
-from handlers import (
+from bot.config import Config
+from bot.database import Database
+from bot.handlers import (
     admin, channel, music, moderation, 
     analytics, utility, auto_reply
 )
-from services.scheduler import PostScheduler
+from bot.services.scheduler import PostScheduler
 
 # Configure logging
 logging.basicConfig(
