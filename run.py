@@ -3,29 +3,33 @@ import logging
 import sys
 import os
 import asyncio
-
-# Ensure project root is in path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-from bot.main import main as start_bot
+from bot.main import start_emelia
 from web.app import run_web_server
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
 logger = logging.getLogger(__name__)
 
-def start_dashboard():
-    """Start Flask without signal handlers to avoid conflict with Bot"""
+def run_flask():
+    """Run Flask in a separate thread"""
     try:
         run_web_server()
     except Exception as e:
-        logger.error(f"Dashboard Error: {e}")
+        logger.error(f"Flask error: {e}")
 
 if __name__ == '__main__':
-    logger.info("🚀 Starting Emelia Bot...")
+    logger.info("🚀 Starting Emelia Bot on Python 3.13...")
     
-    # Run dashboard in a background thread
-    web_thread = threading.Thread(target=start_dashboard, daemon=True)
-    web_thread.start()
+    # 1. Start Flask in background thread
+    flask_thread = threading.Thread(target=run_flask, daemon=True)
+    flask_thread.start()
     
-    # Start the Bot (This must be in the main thread)
-    start_bot()
+    # 2. Run the Bot in the main thread using the new async entry point
+    try:
+        asyncio.run(start_emelia())
+    except KeyboardInterrupt:
+        pass
+    except Exception as e:
+        logger.error(f"Main Loop Error: {e}", exc_info=True)
