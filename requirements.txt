@@ -1,41 +1,33 @@
-# Core Bot Framework
+# --- Core Bot Framework ---
 python-telegram-bot==20.7
 
-# Web Framework
+# --- Web Dashboard ---
 Flask==3.0.0
 Flask-Login==0.6.3
-
-# Database
-# SQLite is built-in, no package needed
-
-# Music & Media (Lightweight versions)
-yt-dlp==2023.12.30
-
-# Translation (Fixed version)
-deep-translator==1.11.4
-
-# Utilities
-python-dotenv==1.0.0
-schedule==1.2.0
-pytz==2023.3.post1
-requests==2.31.0
-beautifulsoup4==4.12.2
-
-# Data Processing (Lighter versions)
-# pandas and numpy removed for free tier compatibility
-
-# Web Server
 gunicorn==21.2.0
 
-# Security
-PyJWT==2.8.0
+# --- Music System ---
+yt-dlp==2023.12.30
+ffmpeg-python==0.2.0
 
-# Async Support
+# --- Translation & Language ---
+deep-translator==1.11.4
+langdetect==1.0.9
+
+# --- Utilities & Networking ---
+python-dotenv==1.0.0
+requests==2.31.0
+beautifulsoup4==4.12.2
 aiohttp==3.9.1
 
-# Logging
-colorlog==6.8.0
-
-# Date/Time
+# --- Time & Scheduling ---
+pytz==2023.3.post1
 python-dateutil==2.8.2
 APScheduler==3.10.4
+
+# --- Security & Database ---
+PyJWT==2.8.0
+cryptography==41.0.7
+
+# --- Logging & Formatting ---
+colorlog==6.8.0
