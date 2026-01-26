@@ -1,4 +1,4 @@
-# 🤖 Emelia - Advanced Telegram Board Bot
+# 🤖 Emelia - Advanced Telegram Bot
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
 
