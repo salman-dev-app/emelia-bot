@@ -1,18 +1,22 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=200&text=Emelia%20Bot&fontSize=45&fontColor=fff&animation=fadeIn&fontAlignY=40&desc=Advanced%2050+%20Feature%20Telegram%20Bot%20for%20Channel%20Management&descAlignY=55&descSize=15"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=200&text=Emelia%20Advanced%20Bot&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=40&desc=50+%20Feature%20Telegram%20Channel%20Manager&descAlignY=55&descSize=15"/>
 </div>
+
+
 
 <p align="center">
   <a href="https://github.com/salman-dev-app/emelia-bot">
-    <img src="https://readme-typing-svg.demolab.com?font=Tagesschrift&size=25&duration=2000&pause=800&color=F7F7F7&background=FF001400&center=true&vCenter=true&multiline=true&width=500&height=80&lines=50%2B+Powerful+Features;Manage+Channels+Like+a+Pro" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Tagesschrift&size=25&duration=2000&pause=800&color=F7F7F7&background=FF001400&center=true&vCenter=true&multiline=true&width=500&height=80&lines=50++Feature+Telegram+Bot;Channel+Automation+System" alt="Typing SVG" />
   </a>
 </p>
 
+
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-Advanced_Bot-FF6B6B-FF6B6B?style=for-the-badge&logo=codesandbox&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.10+-FF6B6B?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Telegram-Bot_API-4ECDC4?style=for-the-badge&logo=telegram&logoColor=white" />
+  <img src="https://img.shields.io/badge/Deploy-Render-00D9FF?style=for-the-badge&logo=render&logoColor=white" />
   <img src="https://img.shields.io/github/last-commit/salman-dev-app/emelia-bot?style=for-the-badge&color=00D9FF&label=LAST%20UPDATED&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/github/stars/salman-dev-app/emelia-bot?style=for-the-badge&color=4ECDC4&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/github/forks/salman-dev-app/emelia-bot?style=for-the-badge&color=FF6B6B&logo=github&logoColor=white" />
 </p>
 
 ---
@@ -20,7 +24,7 @@
 <div align="center">
   <h3>
     <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Star" width="25" height="25" style="vertical-align: middle;" />
-    Emelia Bot — Advanced 50+ Feature Telegram Bot for Channel Management
+    A powerful, production-ready Telegram bot with 50+ features for managing channels, scheduling posts, and automating content — free deployment on Render.
   </h3>
 </div>
 
@@ -29,34 +33,30 @@
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Globe%20Showing%20Americas.png" alt="Globe" width="30" height="30" style="vertical-align: middle;" /> Quick Links
 
 <p align="center">
+  <a href="mailto:mdsalmanhelp@gmail.com">
+    <img src="https://img.shields.io/badge/Contact-Send_Email-FF6B6B?style=for-the-badge&logo=minutemailer&logoColor=white" />
+  </a>
   <a href="https://github.com/salman-dev-app/emelia-bot">
-    <img src="https://img.shields.io/badge/Source_Code-View_on_GitHub-FF6B6B?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="mailto:mdsalmanhelp0@gmail.com">
-    <img src="https://img.shields.io/badge/Contact-Send_Email-4ECDC4?style=for-the-badge&logo=minutemailer&logoColor=white" />
-  </a>
-  <a href="https://github.com/salman-dev-app">
-    <img src="https://img.shields.io/badge/Portfolio-View_More_Projects-00D9FF?style=for-the-badge&logo=codesandbox&logoColor=white" />
+    <img src="https://img.shields.io/badge/Source-View_Code-00D9FF?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" alt="Lightbulb" width="30" height="30" style="vertical-align: middle;" /> About The Project
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="30" height="30" style="vertical-align: middle;" /> Core Features & Capabilities
 
-<p>
-Advanced 50+ Feature Telegram Bot for Channel Management. This project is built with performance, scalability, and clean code in mind, following enterprise-level standards.
-</p>
+<div align="center">
 
----
+### Project Highlights
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" alt="Check" width="30" height="30" style="vertical-align: middle;" /> Key Features
+</div>
 
-<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Channel Management</strong> — Connect multiple channels with admin-only command system</p>
-<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Post Scheduling</strong> — Advanced scheduling with draft management and auto-pin</p>
-<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Music System</strong> — YouTube audio playback with playlist management</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Channel Management</strong> — Connect and manage multiple channels with admin-only command system</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Post Scheduling</strong> — Advanced scheduling with draft saving and cancel support</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Auto Pin/Unpin</strong> — Automated message pinning and custom welcome messages</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>User System</strong> — Role-based access control with admin and user tiers</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>50+ Commands</strong> — Comprehensive command set covering every channel management need</p>
 <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Free on Render</strong> — Deploy for free using Render + GitHub integration</p>
-<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Production Ready</strong> — Enterprise-grade error handling and logging</p>
 
 ---
 
@@ -64,42 +64,54 @@ Advanced 50+ Feature Telegram Bot for Channel Management. This project is built 
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,telegram,mongodb&theme=dark" />
+### Backend
+<img src="https://skillicons.dev/icons?i=python&theme=dark" />
 
+<br/>### Tools
+<img src="https://skillicons.dev/icons?i=git,github&theme=dark" />
+
+<br/>
 </div>
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="30" height="30" style="vertical-align: middle;" /> Getting Started
-
-### Prerequisites
-
-Make sure you have the required tools installed before running this project.
-
-### Installation
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="30" height="30" style="vertical-align: middle;" /> Installation & Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/salman-dev-app/emelia-bot.git
 cd emelia-bot
-
-# Install dependencies
 pip install -r requirements.txt
 
 # Set up environment variables
-cp .env.example .env
+export BOT_TOKEN="your_bot_token"
+export API_ID="your_api_id"
+export API_HASH="your_api_hash"
 
-# Deploy to Render
-# Click the Deploy to Render button in the README
+python bot.py
 ```
+
+> **One-click Deploy**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Analytics" width="30" height="30" style="vertical-align: middle;" /> Repository Stats
-
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=salman-dev-app&theme=react-dark&area=true&hide_border=true&bg_color=0D1117&color=FF6B6B&line=4ECDC4" alt="Activity Graph" width="100%" >
+  <h2>
+    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Briefcase.png" alt="Briefcase" width="35" height="35" style="vertical-align: middle;" />
+    Let's Build Together
+  </h2>
 </div>
+
+<p align="center">
+  <a href="mailto:mdsalmanhelp@gmail.com">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=63A4FF&center=true&vCenter=true&width=500&lines=Available+for+New+Opportunities;Open+to+Freelance+Contracts;Let's+Build+Something+Amazing!" alt="Typing SVG" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="mailto:mdsalmanhelp@gmail.com">
+    <img src="https://img.shields.io/badge/Hire_Me-Send_an_Email-63A4FF?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
 ---
 
@@ -112,37 +124,18 @@ cp .env.example .env
 </div>
 
 <p align="center">
-  This project is licensed under the MIT License — feel free to use, modify, and distribute.
+  This project is licensed under the MIT License — feel free to use, modify, and contribute.
 </p>
-
----
-
-<div align="center">
-  <h2>
-    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party" width="30" height="30" style="vertical-align: middle;" />
-    Let's Connect & Collaborate
-  </h2>
-</div>
-
-<p align="center">
-  <a href="https://github.com/salman-dev-app">
-    <img src="https://img.shields.io/badge/VISIT-MY_GITHUB_PROFILE-FF6B6B?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=22&pause=1000&color=FF6B6B&center=true&vCenter=true&width=500&lines=Made+with+Passion+by+Md+Salman+Biswas;Thanks+for+checking+this+out!;Star+%E2%AD%90+if+you+find+it+useful!" alt="Typing SVG" />
-</div>
-
-<br/>
 
 ---
 
 <footer align="center">
   <p>© 2024-2026 Md Salman Biswas · All rights reserved</p>
-  <a href="https://github.com/salman-dev-app">
-    <img src="https://img.shields.io/badge/Profile_Status-Active-4ECDC4?style=flat" alt="Status" />
-  </a>
+  <p>
+    <a href="https://github.com/salman-dev-app">
+      <img src="https://img.shields.io/badge/Profile_Status-Active-4ECDC4?style=flat" alt="Status" style="vertical-align: middle;">
+    </a>
+  </p>
   <p>Engineered by <a href="https://github.com/salman-dev-app">Md Salman Biswas</a></p>
 </footer>
 
